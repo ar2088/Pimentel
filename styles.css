@@ -87,6 +87,16 @@ img,svg{display:block}
 .svc details[open] summary::after{content:"−"}
 .svc p{margin:0;padding:0 16px 18px;color:var(--text);font-size:15px}
 
+.hero__img{width:100%;height:280px;object-fit:cover;object-position:50% 40%;border-radius:14px;display:block;border:1px solid var(--line-d)}
+
+/* Recent work gallery (swipe on mobile) */
+.work{padding:0 0 36px}
+.work__head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:14px}
+.gallery{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(var(--gutter) * -1);padding:0 var(--gutter) 8px}
+.gallery figure{scroll-snap-align:start;flex:0 0 72%;margin:0}
+.gallery img{width:100%;aspect-ratio:3/4;height:auto;object-fit:cover;border-radius:14px;display:block;background:#E6E7E9}
+.gallery figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+
 /* Why: desktop only */
 .why{display:none}
 
@@ -168,8 +178,12 @@ legend{font-size:14px;font-weight:600;margin-bottom:8px;padding:0}
   .trust{display:flex;gap:28px;padding-top:8px}
   .trust li{background:none;padding:0;text-align:left;font-size:14px;display:flex;gap:8px;align-items:baseline}
   .trust strong{display:inline;font-size:15px;margin:0}
-  .hero__media{flex:1 1 0;align-self:stretch;min-height:520px;display:flex;flex-direction:column}
-  .ph{height:auto;flex:1;border-radius:16px}
+  .hero__media{flex:1 1 0;align-self:center;display:flex;flex-direction:column}
+  .hero__img{height:560px;border-radius:16px}
+  .work{padding:88px 0 0}
+  .work__head{margin-bottom:32px}
+  .gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;overflow:visible;margin:0;padding:0}
+  .gallery figcaption{font-size:14px}
   .hero__quote{display:flex;position:absolute;left:24px;right:24px;bottom:24px;margin:0;background:var(--ground);color:var(--ink);border-radius:12px;padding:18px 20px;gap:14px;align-items:center}
   .hero__quote-icon{width:44px;height:44px;border-radius:10px;background:var(--accent);display:flex;align-items:center;justify-content:center;flex:none}
   .hero__quote blockquote{margin:0;font-size:15px}.hero__quote figcaption{font-size:13px;color:var(--muted);margin-top:4px}

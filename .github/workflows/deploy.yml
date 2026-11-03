@@ -29,5 +29,5 @@ jobs:
             || npx --yes wrangler@3 pages project create pimentel-preview --production-branch main || true
       - name: Upload site
         run: |
-          mkdir -p dist && cp index.html styles.css logo-mark.svg dist/
+          mkdir -p dist && cp -r index.html styles.css logo-mark.svg img dist/
           npx --yes wrangler@3 pages deploy dist --project-name pimentel-preview --branch main
